@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { SearchIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 import {
@@ -18,11 +18,11 @@ export default function SearchBar() {
     <form
       action="/search"
       method="GET"
-      className="flex items-stretch h-10 w-full max-w-3xl mx-auto"
+      className="flex h-10 w-full max-w-3xl mx-auto rounded-md overflow-hidden shadow-md"
     >
       {/* Category Dropdown */}
       <Select name="category" defaultValue="all">
-        <SelectTrigger className="min-w-[80px] h-full bg-gray-100 text-black border border-gray-300 rounded-l-md px-2 text-sm">
+        <SelectTrigger className="flex-shrink-0 w-auto h-full bg-gray-100 text-black border border-gray-300 rounded-l-md rounded-r-none px-3 text-sm">
           <SelectValue placeholder="All" />
         </SelectTrigger>
         <SelectContent>
@@ -47,9 +47,9 @@ export default function SearchBar() {
       <button
         type="submit"
         aria-label="Search"
-        className="px-4 bg-yellow-400 text-black rounded-r-md hover:bg-yellow-500 flex items-center justify-center transition-colors"
+        className="flex-shrink-0 px-4 bg-yellow-400 text-black hover:bg-yellow-500 flex items-center justify-center transition-colors rounded-r-md rounded-l-none h-[36px]"
       >
-        <Search className="w-5 h-5" />
+        <SearchIcon className="w-5 h-5" />
       </button>
     </form>
   );
